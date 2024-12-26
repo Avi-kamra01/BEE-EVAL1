@@ -9,9 +9,7 @@
 <body>
     <div class="container">
         <h1>Registered Students</h1>
-        <ul id="students-list">
-            <!-- Dynamically populated using fetch -->
-        </ul>
+        <ul id="students-list"></ul>
         <a href="/">Go Back to Registration Page</a>
     </div>
 
@@ -27,7 +25,9 @@
                     li.textContent = `${student.username} (${student.email}, ${student.phone}, ${student.gender})`;
                     studentsList.appendChild(li);
                 });
-            } catch (error) {
+            } 
+            
+            catch (error) {
                 console.error("Error fetching students:", error);
             }
         };
